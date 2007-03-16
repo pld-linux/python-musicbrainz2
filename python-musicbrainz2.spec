@@ -21,15 +21,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The package python-musicbrainz2 is a client library written in python,
 which provides easy object oriented access to the MusicBrainz Database
 using the XMLWebService. It has been written from scratch and uses a
-different model than PythonMusicbrainz, the first generation python
+different model than PythonMusicbrainz, the first generation Python
 bindings.
-
 
 %description -l pl.UTF-8
 Pakiet python-musicbrainz2 jest biblioteką napisaną w pythonie,
-która dostarcza łatwy obiektowo zorientowany dostęp do Bazy
-MusicBrainz używając XMLWebService.
-
+która dostarcza łatwy obiektowo zorientowany dostęp do bazy
+MusicBrainz przy użyciu XMLWebService. Został napisany od zera i
+wykorzystuje inny model niż PythonMusicbrainz - wiązania Pythona
+pierwszej generacji.
 
 %prep
 %setup -q
