@@ -1,19 +1,17 @@
 Summary:	Python module for MusicBrainz 2nd generation
 Summary(pl.UTF-8):	Moduł języka Python dla MusicBrainz drugiej generacji
 Name:		python-musicbrainz2
-Version:	0.4.1
+Version:	0.5.0
 Release:	1
-License:	LGPL
+License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://ftp.musicbrainz.org/pub/musicbrainz/python-musicbrainz2/%{name}-%{version}.tar.gz
-# Source0-md5:	c61079631f453059b56c8bcab525018c
+# Source0-md5:	88e774dab88da4ef2c82df6c417281d9
 URL:		http://icepick.info/projects/python-musicbrainz/
-BuildRequires:	python-ctypes
-BuildRequires:	python-devel
+BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
-Requires:	python-ctypes
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,10 +37,12 @@ find -type f -exec sed -i -e 's|#!.*python.*|#!%{_bindir}/python|g' "{}" ";"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-python ./setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
+%{__python} ./setup.py install \
+	--optimize=2 \
+	--root=$RPM_BUILD_ROOT
+
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %py_postclean
 
@@ -51,6 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.txt
+%doc AUTHORS.txt CHANGES.txt COPYING.txt README.txt
+%attr(755,root,root) %{_bindir}/mb-submit-disc
 %{py_sitescriptdir}/musicbrainz2
+%{py_sitescriptdir}/python_musicbrainz2-*.egg-info
 %{_examplesdir}/%{name}-%{version}
