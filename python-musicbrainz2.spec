@@ -7,7 +7,7 @@ License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://ftp.musicbrainz.org/pub/musicbrainz/python-musicbrainz2/%{name}-%{version}.tar.gz
 # Source0-md5:	2ab23c3c15885d29ebd01bcc44ccc823
-URL:		http://icepick.info/projects/python-musicbrainz/
+URL:		http://musicbrainz.org/doc/PythonMusicBrainz2
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
@@ -23,11 +23,10 @@ different model than PythonMusicbrainz, the first generation Python
 bindings.
 
 %description -l pl.UTF-8
-Pakiet python-musicbrainz2 jest biblioteką napisaną w pythonie,
-która dostarcza łatwy obiektowo zorientowany dostęp do bazy
-MusicBrainz przy użyciu XMLWebService. Został napisany od zera i
-wykorzystuje inny model niż PythonMusicbrainz - wiązania Pythona
-pierwszej generacji.
+Pakiet python-musicbrainz2 jest biblioteką napisaną w pythonie, która
+dostarcza łatwy obiektowo zorientowany dostęp do bazy MusicBrainz przy
+użyciu XMLWebService. Został napisany od zera i wykorzystuje inny
+model niż PythonMusicbrainz - wiązania Pythona pierwszej generacji.
 
 %prep
 %setup -q
