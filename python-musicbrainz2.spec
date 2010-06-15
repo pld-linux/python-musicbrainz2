@@ -1,12 +1,12 @@
 Summary:	Python module for MusicBrainz 2nd generation
 Summary(pl.UTF-8):	Moduł języka Python dla MusicBrainz drugiej generacji
 Name:		python-musicbrainz2
-Version:	0.7.0
+Version:	0.7.2
 Release:	1
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://ftp.musicbrainz.org/pub/musicbrainz/python-musicbrainz2/%{name}-%{version}.tar.gz
-# Source0-md5:	7aa39add30fcd7e1724d4b29ba1f050e
+# Source0-md5:	89fa67121973014dec8629f2cc75b826
 URL:		http://musicbrainz.org/doc/PythonMusicBrainz2
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
